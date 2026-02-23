@@ -18,5 +18,7 @@ determine minimum project duration.
 
 # Regression Testing
 - Multiple test cases combined to do a test
+- "Smoke Test"
 
-> this is a blockquote
+`Java
+System.out.println("Hello world!");`
