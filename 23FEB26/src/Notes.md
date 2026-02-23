@@ -23,3 +23,9 @@ determine minimum project duration.
 ```Java
 System.out.println("Hello world!");
 ```
+
+Here's a sentence with a footnote. [^1]
+
+[^1]: I am the footnote.
+
+- Does this come before or after the footnote?
