@@ -20,12 +20,5 @@ determine minimum project duration.
 - Multiple test cases combined to do a test
 - "Smoke Test"
 
-```Java
-System.out.println("Hello world!");
-```
-
-Here's a sentence with a footnote. [^1]
-
-[^1]: I am the footnote.
-
-- Does this come before or after the footnote?
+# Project Management Matrix
+![Requirements Traceability Matrix]('/Users/j2505812/workspace/ACC/Intermediate Java/INSTRUCTION/23FEB26/src/Resources/RequirementsTraceabilityMatrixExample.png' "Requirements Traceability Matrix")
