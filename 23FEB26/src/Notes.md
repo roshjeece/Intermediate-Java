@@ -12,3 +12,5 @@
 - UAT
 - Alpha Testing
 - Beta Testing
+
+# Critical Path Method
