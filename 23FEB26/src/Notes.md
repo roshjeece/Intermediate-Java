@@ -1,6 +1,6 @@
 # Types
 - White Box vs. Black Box
-- Automated vs Manual
+- Automated vs. Manual
 - Functional vs. non-functional
 - Random vs. directed
 
@@ -14,9 +14,9 @@
 
 # Critical Path Method
 - Project management technique that identifies the longest sequence of dependent tasks (the "critical path") to
-determine minimum project duration
-what
-if
-i
-do
-this
+determine minimum project duration.
+
+# Regression Testing
+- Multiple test cases combined to do a test
+
+> this is a blockquote
