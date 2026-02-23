@@ -15,11 +15,11 @@
 # Critical Path Method
 - Project management technique that identifies the longest sequence of dependent tasks (the "critical path") to
 determine minimum project duration.
-
+---
 # Regression Testing
 - Multiple test cases combined to do a test
 - "Smoke Test"
 
 ```Java
-System.out.println("Hell world!");
+System.out.println("Hello world!");
 ```
