@@ -20,5 +20,6 @@ determine minimum project duration.
 - Multiple test cases combined to do a test
 - "Smoke Test"
 
-`Java
-System.out.println("Hello world!");`
+```Java
+System.out.println("Hell world!");
+```
