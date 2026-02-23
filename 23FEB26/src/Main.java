@@ -1,15 +1,64 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner input = new Scanner(System.in);
+        int choice;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        do{
+            System.out.println("What type of patient... 1 for in-patient, 2 for out-patient: ");
+            choice = input.nextInt();
+        }while((choice != 1) && (choice != 2));
+
+        if(choice == 1)
+            manageInPatient();
+        else
+            manageOutPatient();
+
+    }
+
+    public static void manageInPatient(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("inpatient");
+        int days;
+        double dailyRate;
+        double hospitalCharges;
+        double hospitalMedication;
+
+        do{
+            System.out.print("Enter how many days: ");
+            days = input.nextInt();
+        }while(!validate(days));
+
+        do{
+            System.out.print("Enter how much is the daily rate: ");
+            dailyRate = input.nextInt();
+        }while(!validate(dailyRate));
+
+        do{
+            System.out.print("Enter the hospital charges: ");
+            hospitalCharges = input.nextInt();
+        }while(!validate(hospitalCharges));
+
+        do{
+            System.out.print("Enter the hospital medication: ");
+            hospitalMedication = input.nextInt();
+        }while(!validate(hospitalMedication));
+
+        calculateCharges(days, dailyRate, hospitalCharges, hospitalMedication);
+    }
+
+    public static void manageOutPatient(){
+        System.out.println("outpatient");
+    }
+
+    public static boolean validate(double num) {
+        return num >= 0.0;
+    }
+
+    public static void calculateCharges(int days, double dailyRate, double hospitalCharges, double hospitalMedication){
+        double totalCharges = days * dailyRate + hospitalCharges + hospitalMedication;
+
+        System.out.println("Total charges is: " + totalCharges);
     }
 }
