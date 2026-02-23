@@ -21,4 +21,4 @@ determine minimum project duration.
 - "Smoke Test"
 
 # Project Management Matrix
-![Requirements Traceability Matrix](/Users/j2505812/workspace/ACC/Intermediate Java/INSTRUCTION/23FEB26/src/Resources/RequirementsTraceabilityMatrixExample.png)
+![Requirements Traceability Matrix](https://s3.us-east-1.amazonaws.com/static2.simplilearn.com/ice9/free_resources_article_thumb/RequirementsTraceabilityMatrixExample.png)
