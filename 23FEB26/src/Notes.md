@@ -27,9 +27,8 @@ determine minimum project duration.
 
 Some problems will be incredibly challenging without arrays, such as the in-class activity from today:
 
-*
-write a java program that does the following:
 
+>write a java program that does the following:
 display a menu that will have the following options
 add employee
 average age
@@ -37,4 +36,3 @@ employees above certain age
 quit
 The system can add up to 5 employees. We just care about the ages so you don't need to create a class for them
 The system should not allow you to add more than 5 employees
-*
