@@ -1,16 +1,23 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.print(fact(5));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the # of the fibonacci sequence you wish to see: ");
 
-    }
+        int seq = input.nextInt();
+        int left = 0;
+        int right = 1;
 
-    public static int fact(int n) {
+        for(int i = 0; i < seq; i++) {
+            int next = left + right;
+            left = right;
+            right = next;
+        }
 
-        if(n==1)
-            return 1;
+        System.out.println(right);
 
-        return n * fact(n-1);
     }
 }
