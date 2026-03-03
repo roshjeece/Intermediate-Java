@@ -1,7 +1,7 @@
 ```Java
 import java.util.Scanner;
 
-public class Main {
+public class IterativeFibonacci {
     public static void main(String[] args) {
 
         int[] x = {3, 10, 20, 40};
