@@ -1,77 +1,30 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
-    public static final Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        System.out.println("Enter number of students: ");
-        int size = input.nextInt();
-        Student[] students = new Student[size];
+        /*
+        create an array list for students
+        add some objects to it
+        then sort based on age
+         */
 
-        addStudents(size, students);
-        sortStudents(students);
-        binaryAgeSearch(students);
+        ArrayList<Student> students = new ArrayList<Student>();
 
-    }
-
-    static void addStudents(int size, Student[] students) {
-        int count = 0;
-
-        while (count < size) {
-            System.out.println("Enter age: ");
-            int age = input.nextInt();
-
-            System.out.println("Enter GPA: ");
-            double gpa = input.nextDouble();
-            input.nextLine();
-
-            students[count++] = new Student(age, gpa);
-        }
-
-    }
-
-    static void sortStudents(Student[] students) {
+        students.add(new Student(13, 2.00));
+        students.add(new Student(15, 3.00));
+        students.add(new Student(17, 4.00));
+        students.add(new Student(19, 3.50));
+        students.add(new Student(12, 3.70));
+        students.add(new Student(16, 4.01));
 
 
-        for (int pass = 0; pass < students.length - 1; pass++) {
-            for (int i = 0; i < students.length - 1 - pass; i++) {
-                if (students[i].getAge() > students[i+1].getAge()) {
-                    Student temp = students[i];
-                    students[i] = students[i+1];
-                    students[i+1] = temp;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(students));
-    }
+        Collections.sort(students);
 
-    static void binaryAgeSearch(Student[] students) {
-        System.out.println("What age do you want to search for: ");
-        int targetAge = input.nextInt();
+        System.out.println(students);
 
-        int lowIndex = 0;
-        int highIndex = students.length - 1;
-
-        while (lowIndex <= highIndex) {
-            int midIndex = lowIndex + (highIndex - lowIndex) / 2;
-            int guessNumber = students[midIndex].getAge();
-
-            if (guessNumber == targetAge) {
-                System.out.println("Found at index: " + midIndex);
-                return;
-            }
-
-            else if (guessNumber > targetAge) {
-                highIndex = midIndex - 1;
-            }
-
-            else {
-                lowIndex = midIndex + 1;
-            }
-        }
-        System.out.println("Not found");
     }
 
 }

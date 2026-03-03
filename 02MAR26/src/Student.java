@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Comparable<Student>{
     private int age;
     private double gpa;
 
@@ -29,5 +29,12 @@ public class Student {
                 "age=" + age +
                 ", gpa=" + gpa +
                 '}';
+    }
+
+    public int compareTo(Student obj){
+        if (this.age < obj.gpa)
+            return -1;
+        else
+            return 1;
     }
 }
