@@ -18,7 +18,10 @@ public class CompanyXYZ {
             int choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    xyz.addEmployee(employeeAddMenu()); // display employee add menu, feed result into add employee within company
+                    Employee newEmployee = employeeAddMenu();
+                    if (newEmployee != null) {
+                        xyz.addEmployee(newEmployee);
+                    }; // display employee add menu, feed result into add employee within company
                     break;
                 case 2:
                     System.out.println("Enter employee id you want to remove: ");
@@ -155,7 +158,7 @@ class Company {
 
     Employee findById(int id) {
         for(Employee employee : employees) {
-            if (id == employee.id) {
+            if (id == employee.getId()) {
                 return employee;
             }
         }
@@ -191,6 +194,7 @@ class Company {
     }
 
     void importEmployeeList(){
+        employees.clear();
         File myObj = new File("employees.txt");
 
         try (Scanner myReader = new Scanner(myObj)) {
@@ -248,10 +252,24 @@ class Company {
 }
 
 class Employee {
-    int id;
-    String name;
-    String address;
+    final private int id;
+    private String name;
+    private String address;
 
+    public int getId() {
+        return id;
+    }
+
+    // Unused getters
+    /*
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    */
     public Employee(int id, String name, String address) {
         this.id = id;
         this.name = name;
@@ -274,8 +292,19 @@ class Employee {
 }
 
 class PartTime extends Employee {
-    double hours;
-    double rate;
+    private double hours;
+    private double rate;
+
+    // Unused getters
+    /*
+    public double getHours() {
+        return hours;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+    */
 
     public PartTime(int id, String name, String address, double hours, double rate) {
         super(id, name, address);
@@ -299,7 +328,14 @@ class PartTime extends Employee {
 }
 
 class FullTime extends Employee {
-    double benefit;
+    protected double benefit;
+
+    // Unused getter
+    /*
+    public double getBenefit() {
+        return benefit;
+    }
+    */
 
     public FullTime(int id, String name, String address, double benefit) {
         super(id, name, address);
@@ -317,7 +353,14 @@ class FullTime extends Employee {
 }
 
 class SalariedFull extends FullTime {
-    double salary;
+    private double salary;
+
+    // Unused getter
+    /*
+    public double getSalary() {
+        return salary;
+    }
+     */
 
     public SalariedFull(int id, String name, String address, double benefit, double salary) {
         super(id, name, address, benefit);
@@ -339,8 +382,8 @@ class SalariedFull extends FullTime {
 }
 
 class HourlyFull extends FullTime {
-    double hours;
-    double rate;
+    private double hours;
+    private double rate;
 
     public HourlyFull(int id, String name, String address, double benefit, double hours, double rate) {
         super(id, name, address, benefit);
