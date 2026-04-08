@@ -169,9 +169,6 @@ class LinkedList {
     // this is going to be insertion sort
     void addSorted(int[] array) {
         head = new Node(array[0]);
-        if (head == null) {
-            head
-        }
 
         for (int i = 1; i < array.length; i++) {
             Node new_node = new Node(array[i]);
